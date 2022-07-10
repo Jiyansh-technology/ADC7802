@@ -1,0 +1,12 @@
+main.c:112:19:read7802	40	static
+main.c:150:6:I2C_channel_initADC	32	static
+main.c:228:10:avg	32	static
+main.c:239:6:calibration	32	static
+main.c:265:6:calculation	16	static
+main.c:285:6:Uart_PutNumber	48	static
+main.c:310:5:main	8	static
+main.c:371:6:SystemClock_Config	72	static
+main.c:409:13:MX_I2C1_Init	8	static
+main.c:443:13:MX_USART1_UART_Init	8	static
+main.c:476:13:MX_GPIO_Init	40	static
+main.c:512:6:Error_Handler	4	static,ignoring_inline_asm

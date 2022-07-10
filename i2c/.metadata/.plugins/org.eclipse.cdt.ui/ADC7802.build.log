@@ -1,0 +1,10 @@
+14:45:31 **** Incremental Build of configuration Debug for project ADC7802 ****
+make -j12 all 
+arm-none-eabi-size   ADC7802.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12704	     20	   1780	  14504	   38a8	ADC7802.elf
+Finished building: default.size.stdout
+ 
+
+14:45:31 Build Finished. 0 errors, 0 warnings. (took 314ms)
+
