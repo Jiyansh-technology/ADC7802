@@ -1,0 +1,787 @@
+13:59:19 **** Incremental Build of configuration Debug for project khandelwal_23_09_19 ****
+make -j12 all 
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F207xx -c -I../Inc -I../Drivers/STM32F2xx_HAL_Driver/Inc -I../Drivers/STM32F2xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F2xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:28:
+../Inc/rtc.h: In function 'read_rtc':
+../Inc/rtc.h:143:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+  143 |        T_D[m]=bcd2dec(T_D[m]);
+      |           ^
+../Inc/rtc.h:143:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+  143 |        T_D[m]=bcd2dec(T_D[m]);
+      |                          ^
+../Src/main.c: In function 'save_EP2':
+../Src/main.c:223:8: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  223 |  else  if(x.ct<=TARE.ct)
+      |        ^~
+../Src/main.c:226:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  226 |   if(auto_mrp)
+      |   ^~
+../Src/main.c:235:11: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  235 |     else  if(x.ct<=TARE.ct)
+      |           ^~
+../Src/main.c:238:6: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  238 |      MRP.ct=rate.ct*net.ct;
+      |      ^~~
+../Src/main.c: In function 'sendresponce2':
+../Src/main.c:954:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  954 |       else  if(x.ct<=TARE.ct)
+      |             ^~
+../Src/main.c:957:8: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  957 |        MRP.ct=rate.ct*net.ct;
+      |        ^~~
+../Src/main.c: In function 'send_sr':
+../Src/main.c:1219:7: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1219 |    sen[i]=a%10;
+      |       ^
+../Src/main.c: In function 'Tx_byte':
+../Src/main.c:1246:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 1246 |    if(uart==4)
+      |    ^~
+../Src/main.c:1248:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 1248 |   if(uart==6)
+      |   ^~
+../Src/main.c: In function 'weight_tare_tx':
+../Src/main.c:1263:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1263 |   Tx_byte(re[dp],uart);
+      |             ^
+../Src/main.c: In function 'read_EP1':
+../Src/main.c:1272:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+ 1272 |   for(a=0;a<16;a++)
+      |   ^~~
+../Src/main.c:1275:6: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+ 1275 |      arr1[0]=32;
+      |      ^~~~
+../Src/main.c: In function 'read_EP2':
+../Src/main.c:1514:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+ 1514 |   for(a=0;a<16;a++)
+      |   ^~~
+../Src/main.c:1517:6: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+ 1517 |      arr1[0]=32;
+      |      ^~~~
+../Src/main.c: In function 'weight_tx_mrp':
+../Src/main.c:1780:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1780 |           Tx_byte(re[dp],uart);
+      |                     ^
+../Src/main.c: In function 'read_EP3':
+../Src/main.c:1788:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+ 1788 |   for(a=0;a<16;a++)
+      |   ^~~
+../Src/main.c:1791:6: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+ 1791 |      arr1[0]=32;
+      |      ^~~~
+../Src/main.c: In function 'weight_send_withoutdp':
+../Src/main.c:1953:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1953 |     Tx_byte(charactor[tareno_arr[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:1962:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1962 |     Tx_byte(charactor[BOBBIN_arr[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:1983:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1983 |     Tx_byte(charactor[size_arr[dp]],uart);
+      |                       ~~~~~~~~^~~~
+../Src/main.c:1992:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 1992 |     Tx_byte(charactor[product_arr[dp]],uart);
+      |                       ~~~~~~~~~~~^~~~
+../Src/main.c:2009:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2009 |     Tx_byte(charactor[cost_po_arr[dp]],uart);
+      |                       ~~~~~~~~~~~^~~~
+../Src/main.c:2017:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2017 |     Tx_byte(charactor[grade_arr[dp]],uart);
+      |                       ~~~~~~~~~^~~~
+../Src/main.c:2025:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2025 |     Tx_byte(charactor[class_arr[dp]],uart);
+      |                       ~~~~~~~~~^~~~
+../Src/main.c:2033:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2033 |     Tx_byte(charactor[material_arr[dp]],uart);
+      |                       ~~~~~~~~~~~~^~~~
+../Src/main.c:2041:39: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2041 |     Tx_byte(charactor[overall_size_arr[dp]],uart);
+      |                       ~~~~~~~~~~~~~~~~^~~~
+../Src/main.c:2050:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2050 |     Tx_byte(charactor[spool_arr[dp]],uart);
+      |                       ~~~~~~~~~^~~~
+../Src/main.c:2057:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2057 |    Tx_byte(charactor[covering_arr[0]],uart);
+      |                      ~~~~~~~~~~~~^~~
+../Src/main.c:2058:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2058 |   Tx_byte(charactor[covering_arr[1]],uart);
+      |                     ~~~~~~~~~~~~^~~
+../Src/main.c:2066:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2066 |     Tx_byte(charactor[wo_arr[dp]],uart);
+      |                       ~~~~~~^~~~
+../Src/main.c:2074:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2074 |     Tx_byte(charactor[MRP_arr[dp]],uart);
+      |                       ~~~~~~~^~~~
+../Src/main.c:2090:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2090 |     Tx_byte(charactor[leght_arr[dp]],uart);
+      |                       ~~~~~~~~~^~~~
+../Src/main.c:2098:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2098 |     Tx_byte(charactor[lot_arr[dp]],uart);
+      |                       ~~~~~~~^~~~
+../Src/main.c:2105:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2105 |     Tx_byte(charactor[box_arr[dp]],uart);
+      |                       ~~~~~~~^~~~
+../Src/main.c: In function 'weight_send_withoutdp1':
+../Src/main.c:2120:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2120 |     Tx_byte(charactor[tareno_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~^~~~
+../Src/main.c:2128:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2128 |     Tx_byte(charactor[BOBBIN_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~^~~~
+../Src/main.c:2153:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2153 |     Tx_byte(charactor[size_arr1[dp]],uart);
+      |                       ~~~~~~~~~^~~~
+../Src/main.c:2162:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2162 |     Tx_byte(charactor[product_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~~^~~~
+../Src/main.c:2180:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2180 |     Tx_byte(charactor[cost_po_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~~^~~~
+../Src/main.c:2188:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2188 |     Tx_byte(charactor[grade_arr1[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:2196:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2196 |     Tx_byte(charactor[class_arr1[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:2206:36: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2206 |     Tx_byte(charactor[material_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~~~^~~~
+../Src/main.c:2214:40: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2214 |     Tx_byte(charactor[overall_size_arr1[dp]],uart);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+../Src/main.c:2226:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2226 |     Tx_byte(charactor[spool_arr1[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:2233:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2233 |    Tx_byte(charactor[covering_arr1[0]],uart);
+      |                      ~~~~~~~~~~~~~^~~
+../Src/main.c:2234:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2234 |   Tx_byte(charactor[covering_arr1[1]],uart);
+      |                     ~~~~~~~~~~~~~^~~
+../Src/main.c:2243:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2243 |     Tx_byte(charactor[wo_arr1[dp]],uart);
+      |                       ~~~~~~~^~~~
+../Src/main.c:2252:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2252 |     Tx_byte(charactor[leght_arr1[dp]],uart);
+      |                       ~~~~~~~~~~^~~~
+../Src/main.c:2260:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2260 |     Tx_byte(charactor[lot_arr1[dp]],uart);
+      |                       ~~~~~~~~^~~~
+../Src/main.c:2279:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2279 |     Tx_byte(charactor[MRP_arr1[dp]],uart);
+      |                       ~~~~~~~~^~~~
+../Src/main.c:2286:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2286 |     Tx_byte(charactor[box_arr1[dp]],uart);
+      |                       ~~~~~~~~^~~~
+../Src/main.c: In function 'weight_tx':
+../Src/main.c:2306:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2306 |           Tx_byte(re[dp],uart);
+      |                     ^
+../Src/main.c: In function 'setting2':
+../Src/main.c:2350:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2350 |          MRP_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:2350:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2350 |          MRP_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:2381:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2381 |            size_arr[a]=lcdr[a];
+      |                    ^
+../Src/main.c:2381:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2381 |            size_arr[a]=lcdr[a];
+      |                            ^
+../Src/main.c:2394:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2394 |            leght_arr[a]=lcdr[a];
+      |                     ^
+../Src/main.c:2394:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2394 |            leght_arr[a]=lcdr[a];
+      |                             ^
+../Src/main.c:2406:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2406 |            lot_arr[a]=lcdr[a];
+      |                   ^
+../Src/main.c:2406:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2406 |            lot_arr[a]=lcdr[a];
+      |                           ^
+../Src/main.c:2426:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2426 |        size_arr[a]=lcdr[a];
+      |                ^
+../Src/main.c:2426:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2426 |        size_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:2439:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2439 |        overall_size_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:2439:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2439 |        overall_size_arr[a]=lcdr[a];
+      |                                ^
+../Src/main.c:2451:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2451 |        grade_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:2451:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2451 |        grade_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:2461:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2461 |        class_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:2461:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2461 |        class_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:2474:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2474 |        material_arr[a]=lcdr[a];
+      |                    ^
+../Src/main.c:2474:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2474 |        material_arr[a]=lcdr[a];
+      |                            ^
+../Src/main.c:2488:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2488 |        cost_po_arr[a]=lcdr[a];
+      |                   ^
+../Src/main.c:2488:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2488 |        cost_po_arr[a]=lcdr[a];
+      |                           ^
+../Src/main.c:2507:14: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2507 |        wo_arr[a]=lcdr[a];
+      |              ^
+../Src/main.c:2507:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2507 |        wo_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:2522:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2522 |         size_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:2522:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2522 |         size_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:2534:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2534 |        class_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:2534:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2534 |        class_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:2557:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2557 |        covering_arr[a]=lcdr[a];
+      |                    ^
+../Src/main.c:2557:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2557 |        covering_arr[a]=lcdr[a];
+      |                            ^
+../Src/main.c:2569:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2569 |        material_arr[a]=lcdr[a];
+      |                    ^
+../Src/main.c:2569:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2569 |        material_arr[a]=lcdr[a];
+      |                            ^
+../Src/main.c:2581:14: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2581 |        wo_arr[a]=lcdr[a];
+      |              ^
+../Src/main.c:2581:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2581 |        wo_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:2597:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2597 |           tareno_arr[a]=lcdr[a];
+      |                     ^
+../Src/main.c:2597:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2597 |           tareno_arr[a]=lcdr[a];
+      |                             ^
+../Src/main.c:2609:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2609 |         BOBBIN_arr[a]=lcdr[a];
+      |                   ^
+../Src/main.c:2609:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2609 |         BOBBIN_arr[a]=lcdr[a];
+      |                           ^
+../Src/main.c:3286:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3286 |         product_arr[a]=lcdr[a];
+      |                    ^
+../Src/main.c:3286:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3286 |         product_arr[a]=lcdr[a];
+      |                            ^
+../Src/main.c:3312:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3312 |          box_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:3312:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3312 |          box_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c: In function 'display':
+../Src/main.c:3682:8: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3682 |    arr1[xx]=d%10;
+      |        ^
+../Src/main.c: In function 'dis_tare_lcd':
+../Src/main.c:3698:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3698 |     lcd_data(m[a]);
+      |               ^
+../Src/main.c: In function 'dis_BOBBIN_lcd':
+../Src/main.c:3709:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3709 |     lcd_data(charactor[BOBBIN_arr[a]]);
+      |                                  ^
+../Src/main.c:3709:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3709 |     lcd_data(charactor[BOBBIN_arr[a]]);
+      |                        ~~~~~~~~~~^~~
+../Src/main.c:3716:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3716 |     lcd_data(charactor[cost_po_arr[a]]);
+      |                                   ^
+../Src/main.c:3716:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3716 |     lcd_data(charactor[cost_po_arr[a]]);
+      |                        ~~~~~~~~~~~^~~
+../Src/main.c:3723:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3723 |     lcd_data(charactor[grade_arr[a]]);
+      |                                 ^
+../Src/main.c:3723:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3723 |     lcd_data(charactor[grade_arr[a]]);
+      |                        ~~~~~~~~~^~~
+../Src/main.c:3731:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3731 |     lcd_data(charactor[class_arr[a]]);
+      |                                 ^
+../Src/main.c:3731:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3731 |     lcd_data(charactor[class_arr[a]]);
+      |                        ~~~~~~~~~^~~
+../Src/main.c:3739:36: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3739 |     lcd_data(charactor[material_arr[a]]);
+      |                                    ^
+../Src/main.c:3739:36: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3739 |     lcd_data(charactor[material_arr[a]]);
+      |                        ~~~~~~~~~~~~^~~
+../Src/main.c:3747:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3747 |    lcd_data(charactor[class_arr[0]]);
+      |                       ~~~~~~~~~^~~
+../Src/main.c:3748:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3748 |     lcd_data(charactor[class_arr[1]]);
+      |                        ~~~~~~~~~^~~
+../Src/main.c:3753:35: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3753 |    lcd_data(charactor[covering_arr[0]]);
+      |                       ~~~~~~~~~~~~^~~
+../Src/main.c:3754:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3754 |   lcd_data(charactor[covering_arr[1]]);
+      |                      ~~~~~~~~~~~~^~~
+../Src/main.c:3758:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3758 |   lcd_data(charactor[material_arr[0]]);
+      |                      ~~~~~~~~~~~~^~~
+../Src/main.c:3759:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3759 |   lcd_data(charactor[material_arr[1]]);
+      |                      ~~~~~~~~~~~~^~~
+../Src/main.c:3765:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3765 |     lcd_data(charactor[wo_arr[a]]);
+      |                              ^
+../Src/main.c:3765:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3765 |     lcd_data(charactor[wo_arr[a]]);
+      |                        ~~~~~~^~~
+../Src/main.c:3773:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3773 |     lcd_data(charactor[size_arr[a]]);
+      |                                ^
+../Src/main.c:3773:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3773 |     lcd_data(charactor[size_arr[a]]);
+      |                        ~~~~~~~~^~~
+../Src/main.c:3781:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3781 |     lcd_data(charactor[leght_arr[a]]);
+      |                                 ^
+../Src/main.c:3781:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3781 |     lcd_data(charactor[leght_arr[a]]);
+      |                        ~~~~~~~~~^~~
+../Src/main.c:3789:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3789 |     lcd_data(charactor[lot_arr[a]]);
+      |                               ^
+../Src/main.c:3789:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3789 |     lcd_data(charactor[lot_arr[a]]);
+      |                        ~~~~~~~^~~
+../Src/main.c: In function 'dis_tarearr_lcd':
+../Src/main.c:3801:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3801 |     lcd_data(charactor[tareno_arr[a]]);
+      |                                  ^
+../Src/main.c:3801:34: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3801 |     lcd_data(charactor[tareno_arr[a]]);
+      |                        ~~~~~~~~~~^~~
+../Src/main.c: In function 'dis_weight':
+../Src/main.c:3848:8: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3848 |    arr1[x]=num;
+      |        ^
+../Src/main.c: In function 'dis_weight_lcd':
+../Src/main.c:3874:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 3874 |     lcd_data(m[a]);
+      |               ^
+../Src/main.c: In function 'setting':
+../Src/main.c:4482:9: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+ 4482 |         while((HAL_GPIO_ReadPin(GPIOE,k7_Pin)==0));
+      |         ^~~~~
+../Src/main.c:4484:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+ 4484 |         arr1[5]++;
+      |         ^~~~
+../Src/main.c:4515:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4515 |        lc_e=lc_s[l];
+      |                 ^
+../Src/main.c: In function 'key_edit':
+../Src/main.c:4625:12: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4625 |        arr1[k]++;
+      |            ^
+../Src/main.c:4626:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4626 |        if(arr1[k]>9)
+      |               ^
+../Src/main.c:4627:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4627 |        {arr1[k]=0;}
+      |             ^
+../Src/main.c:4633:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4633 |           arr1[k]=0;
+      |               ^
+../Src/main.c:4640:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4640 |          GPIOA->ODR=arr1[k];
+      |                         ^
+../Src/main.c: In function 'key':
+../Src/main.c:4678:36: error: expected expression before ')' token
+ 4678 |    if(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0){buzzer(30);HAL_Delay(100);ch=4;}
+      |                                    ^
+../Src/main.c: In function 'sharp':
+../Src/main.c:4694:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4694 |     arr1[a]=37;
+      |         ^
+../Src/main.c:4703:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 4703 |    arr1[5]=shrp[a];
+      |                ^
+../Src/main.c: In function 'curr_c':
+../Src/main.c:4803:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+ 4803 |    while(HAL_GPIO_ReadPin(GPIOB,SDA_710_Pin));        // WAIT FOR DOUT TO LOW : MEANS DATA IS READY FOR RETREIVAL
+      |    ^~~~~
+../Src/main.c:4804:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+ 4804 |   for(i=0;i<24;i++)
+      |   ^~~
+../Src/main.c: In function 'ps2_read':
+../Src/main.c:4986:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+ 4986 |    while(HAL_GPIO_ReadPin(GPIOA,KB_CLK_Pin)==1);
+      |    ^~~~~
+../Src/main.c:4987:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+ 4987 |   while(HAL_GPIO_ReadPin(GPIOA,KB_CLK_Pin)==0);
+      |   ^~~~~
+../Src/main.c: In function 'key_edit2':
+../Src/main.c:5073:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5073 |       lcdr[a]=size_arr[a];
+      |           ^
+../Src/main.c:5073:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5073 |       lcdr[a]=size_arr[a];
+      |                       ^
+../Src/main.c:5081:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5081 |       lcdr[a]=overall_size_arr[a];
+      |           ^
+../Src/main.c:5081:31: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5081 |       lcdr[a]=overall_size_arr[a];
+      |                               ^
+../Src/main.c:5089:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5089 |       lcdr[a]=grade_arr[a];
+      |           ^
+../Src/main.c:5089:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5089 |       lcdr[a]=grade_arr[a];
+      |                        ^
+../Src/main.c:5097:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5097 |       lcdr[a]=class_arr[a];
+      |           ^
+../Src/main.c:5097:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5097 |       lcdr[a]=class_arr[a];
+      |                        ^
+../Src/main.c:5105:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5105 |       lcdr[a]=material_arr[a];
+      |           ^
+../Src/main.c:5105:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5105 |       lcdr[a]=material_arr[a];
+      |                           ^
+../Src/main.c:5114:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5114 |       lcdr[a]=product_arr[a];
+      |           ^
+../Src/main.c:5114:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5114 |       lcdr[a]=product_arr[a];
+      |                          ^
+../Src/main.c:5122:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5122 |       lcdr[a]=cost_po_arr[a];
+      |           ^
+../Src/main.c:5122:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5122 |       lcdr[a]=cost_po_arr[a];
+      |                          ^
+../Src/main.c:5137:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5137 |       lcdr[a]=BOBBIN_arr[a];
+      |           ^
+../Src/main.c:5137:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5137 |       lcdr[a]=BOBBIN_arr[a];
+      |                         ^
+../Src/main.c:5145:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5145 |       lcdr[a]=tareno_arr[a];
+      |           ^
+../Src/main.c:5145:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5145 |       lcdr[a]=tareno_arr[a];
+      |                         ^
+../Src/main.c:5153:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5153 |       lcdr[a]=size_arr[a];
+      |           ^
+../Src/main.c:5153:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5153 |       lcdr[a]=size_arr[a];
+      |                       ^
+../Src/main.c:5161:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5161 |       lcdr[a]=class_arr[a];
+      |           ^
+../Src/main.c:5161:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5161 |       lcdr[a]=class_arr[a];
+      |                        ^
+../Src/main.c:5170:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5170 |       lcdr[a]=spool_arr[a];
+      |           ^
+../Src/main.c:5170:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5170 |       lcdr[a]=spool_arr[a];
+      |                        ^
+../Src/main.c:5178:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5178 |       lcdr[a]=covering_arr[a];
+      |           ^
+../Src/main.c:5178:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5178 |       lcdr[a]=covering_arr[a];
+      |                           ^
+../Src/main.c:5186:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5186 |       lcdr[a]=material_arr[a];
+      |           ^
+../Src/main.c:5186:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5186 |       lcdr[a]=material_arr[a];
+      |                           ^
+../Src/main.c:5193:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5193 |       lcdr[a]=wo_arr[a];
+      |           ^
+../Src/main.c:5193:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5193 |       lcdr[a]=wo_arr[a];
+      |                     ^
+../Src/main.c:5200:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5200 |       lcdr[a]=MRP_arr[a];
+      |           ^
+../Src/main.c:5200:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5200 |       lcdr[a]=MRP_arr[a];
+      |                      ^
+../Src/main.c:5209:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5209 |       lcdr[a]=size_arr[a];
+      |           ^
+../Src/main.c:5209:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5209 |       lcdr[a]=size_arr[a];
+      |                       ^
+../Src/main.c:5218:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5218 |       lcdr[a]=leght_arr[a];
+      |           ^
+../Src/main.c:5218:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5218 |       lcdr[a]=leght_arr[a];
+      |                        ^
+../Src/main.c:5225:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5225 |       lcdr[a]=lot_arr[a];
+      |           ^
+../Src/main.c:5225:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5225 |       lcdr[a]=lot_arr[a];
+      |                      ^
+../Src/main.c:5232:11: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5232 |       lcdr[a]=box_arr[a];
+      |           ^
+../Src/main.c:5232:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5232 |       lcdr[a]=box_arr[a];
+      |                      ^
+../Src/main.c:5240:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5240 |     lcd_data(charactor[lcdr[a]]);
+      |                            ^
+../Src/main.c:5283:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5283 |              if(scan_value[a]==key_value)
+      |                           ^
+../Src/main.c:5288:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5288 |               lcd_data(charactor[a]);
+      |                                 ^
+../Src/main.c:5290:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5290 |                lcdr[i]=a;
+      |                    ^
+../Src/main.c:5308:14: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5308 |      size_arr[a]=lcdr[a];
+      |              ^
+../Src/main.c:5308:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5308 |      size_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:5316:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5316 |      overall_size_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:5316:30: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5316 |      overall_size_arr[a]=lcdr[a];
+      |                              ^
+../Src/main.c:5324:14: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5324 |     grade_arr[a]=lcdr[a];
+      |              ^
+../Src/main.c:5324:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5324 |     grade_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:5332:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5332 |      class_arr[a]=lcdr[a];
+      |               ^
+../Src/main.c:5332:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5332 |      class_arr[a]=lcdr[a];
+      |                       ^
+../Src/main.c:5340:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5340 |     material_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:5340:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5340 |     material_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:5349:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5349 |     product_arr[a]=lcdr[a];
+      |                ^
+../Src/main.c:5349:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5349 |     product_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:5357:18: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5357 |       cost_po_arr[a]=lcdr[a];
+      |                  ^
+../Src/main.c:5357:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5357 |       cost_po_arr[a]=lcdr[a];
+      |                          ^
+../Src/main.c:5373:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5373 |       BOBBIN_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:5373:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5373 |       BOBBIN_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:5381:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5381 |       tareno_arr[a]=lcdr[a];
+      |                 ^
+../Src/main.c:5381:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5381 |       tareno_arr[a]=lcdr[a];
+      |                         ^
+../Src/main.c:5390:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5390 |       size_arr[a]=lcdr[a];
+      |               ^
+../Src/main.c:5390:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5390 |       size_arr[a]=lcdr[a];
+      |                       ^
+../Src/main.c:5398:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5398 |       class_arr[a]=lcdr[a];
+      |                ^
+../Src/main.c:5398:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5398 |       class_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:5406:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5406 |       spool_arr[a]=lcdr[a];
+      |                ^
+../Src/main.c:5406:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5406 |       spool_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:5414:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5414 |       covering_arr[a]=lcdr[a];
+      |                   ^
+../Src/main.c:5414:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5414 |       covering_arr[a]=lcdr[a];
+      |                           ^
+../Src/main.c:5422:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5422 |       material_arr[a]=lcdr[a];
+      |                   ^
+../Src/main.c:5422:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5422 |       material_arr[a]=lcdr[a];
+      |                           ^
+../Src/main.c:5429:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5429 |       wo_arr[a]=lcdr[a];
+      |             ^
+../Src/main.c:5429:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5429 |       wo_arr[a]=lcdr[a];
+      |                     ^
+../Src/main.c:5436:14: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5436 |       MRP_arr[a]=lcdr[a];
+      |              ^
+../Src/main.c:5436:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5436 |       MRP_arr[a]=lcdr[a];
+      |                      ^
+../Src/main.c:5447:15: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5447 |       size_arr[a]=lcdr[a];
+      |               ^
+../Src/main.c:5447:23: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5447 |       size_arr[a]=lcdr[a];
+      |                       ^
+../Src/main.c:5455:16: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5455 |       leght_arr[a]=lcdr[a];
+      |                ^
+../Src/main.c:5455:24: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5455 |       leght_arr[a]=lcdr[a];
+      |                        ^
+../Src/main.c:5463:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5463 |      lot_arr[a]=lcdr[a];
+      |             ^
+../Src/main.c:5463:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5463 |      lot_arr[a]=lcdr[a];
+      |                     ^
+../Src/main.c:5470:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5470 |      box_arr[a]=lcdr[a];
+      |             ^
+../Src/main.c:5470:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5470 |      box_arr[a]=lcdr[a];
+      |                     ^
+../Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Src/main.c:5604:32: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5604 |     Var=(0x01<<((5-display_char[i])+8));
+      |                                ^
+../Src/main.c:5609:33: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5609 |        GPIOD->ODR=Var|((arr[arr1[i]])&0x0bf);
+      |                                 ^
+../Src/main.c:5611:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5611 |    GPIOD->ODR=Var|arr[arr1[i]];
+      |                           ^
+../Src/main.c: In function 'main':
+../Src/main.c:5701:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 5701 |   if(save_ep_inter==1)
+      |   ^~
+../Src/main.c:5703:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 5703 |  sharp();
+      |  ^~~~~
+../Src/main.c:5723:6: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5723 |   rec[l]='0';
+      |      ^
+../Src/main.c:5729:35: error: expected expression before ')' token
+ 5729 |   if(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)
+      |                                   ^
+../Src/main.c:5734:39: error: expected expression before ')' token
+ 5734 |       if(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)
+      |                                       ^
+../Src/main.c:5797:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 5797 |         arr1[l]=37;
+      |             ^
+../Src/main.c:6039:37: error: expected expression before ')' token
+ 6039 |     if(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)
+      |                                     ^
+../Src/main.c:6043:39: error: expected expression before ')' token
+ 6043 |       if(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)
+      |                                       ^
+../Src/main.c:6071:41: error: expected expression before ')' token
+ 6071 |      while(HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0);
+      |                                         ^
+../Src/main.c:6090:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 6090 |         rec1[l]=rec[l]-48;
+      |             ^
+../Src/main.c:6090:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 6090 |         rec1[l]=rec[l]-48;
+      |                    ^
+../Src/main.c:6114:19: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 6114 |        product_arr[l]=rec[l+1];
+      |                   ^
+../Src/main.c:6238:42: error: expected expression before ')' token
+ 6238 |        if(((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)  || senddata_auto)
+      |                                          ^
+../Src/main.c:6242:46: error: expected expression before ')' token
+ 6242 |          while((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)
+      |                                              ^
+../Src/main.c:6342:43: error: expected expression before ')' token
+ 6342 |         if(((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)  || senddata_auto)
+      |                                           ^
+../Src/main.c:6346:46: error: expected expression before ')' token
+ 6346 |          while((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)
+      |                                              ^
+../Src/main.c:6444:42: error: expected expression before ')' token
+ 6444 |        if(((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)  || senddata_auto)
+      |                                          ^
+../Src/main.c:6448:46: error: expected expression before ')' token
+ 6448 |          while((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)
+      |                                              ^
+../Src/main.c:6578:40: error: expected expression before ')' token
+ 6578 |      if(((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)  || senddata_auto)
+      |                                        ^
+../Src/main.c:6581:46: error: expected expression before ')' token
+ 6581 |          while((HAL_GPIO_ReadPin(GPIOE,k5_Pin)==0)&&HAL_GPIO_ReadPin(GPIOE,k6_Pin)==0)
+      |                                              ^
+../Src/main.c:6650:9: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+ 6650 |         while(HAL_GPIO_ReadPin(GPIOE,k4_Pin)==0);
+      |         ^~~~~
+../Src/main.c:6651:8: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+ 6651 |        stable_f1=1;
+      |        ^~~~~~~~~
+../Src/main.c: In function 'MX_GPIO_Init':
+../Src/main.c:6990:31: error: expected expression before '|' token
+ 6990 |   GPIO_InitStruct.Pin = k5_Pin|k6_Pin|k7_Pin|k8_Pin
+      |                               ^
+make[1]: *** [Src/subdir.mk:31: Src/main.o] Error 1
+make: *** [makefile:59: all] Error 2
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+13:59:20 Build Failed. 17 errors, 222 warnings. (took 693ms)
+
